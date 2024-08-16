@@ -1,0 +1,19 @@
+cabal-version:      3.0
+name:               02hellohaskell
+version:            0.1.0.0
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  other-modules: FunWithFunctions
+  hs-source-dirs: exercises
+  ghc-options: -Wall -Wno-type-defaults -Wno-missing-signatures -Wno-name-shadowing
+  build-depends:
+      base >=4.7 && <5
+    , tasty
+    , tasty-hunit
+  default-language: GHC2021
