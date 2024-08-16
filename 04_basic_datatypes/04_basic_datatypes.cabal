@@ -1,0 +1,19 @@
+cabal-version:      3.0
+name:               04basicdatatypes
+version:            0.1.0.0
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  other-modules:
+  hs-source-dirs: examples
+  ghc-options: -Wall -Wno-type-defaults -Wno-missing-signatures -Wunused-matches
+  build-depends:
+      base >=4.7 && <5
+    , tasty
+    , tasty-hunit
+  default-language: GHC2021
